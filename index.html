@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      history.pushState(null, document.title, location.href);
+      window.addEventListener('popstate', function (event)
+      {
+        history.pushState(null, document.title, location.href);
+      });
+      console.log("Done");</script>
+  </head>
+  <body>
+    <h1>Disable back button example</h1>
+
+    <p>Click the link below to go to this same page, storing this page into browser history</p>
+    <a href="?hello=world">This link</a>
+    <p>Then click into the page (This part is important)</p>
+    <p>Now click the browser back button</p>
+  </body>
+</html>
